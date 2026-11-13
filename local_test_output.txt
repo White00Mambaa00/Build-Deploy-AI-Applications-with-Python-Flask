@@ -1,0 +1,15 @@
+test_blank_text (test_emotion_detection.TestEmotionDetector.test_blank_text)
+Blank input produces six None values without a network call. ... ok
+test_five_emotions (test_emotion_detection.TestEmotionDetector.test_five_emotions)
+Each of the five example texts can map to its expected emotion. ... ok
+test_http_400 (test_emotion_detection.TestEmotionDetector.test_http_400)
+Watson bad-request responses produce six None values. ... ok
+test_http_500_is_not_disguised_as_success (test_emotion_detection.TestEmotionDetector.test_http_500_is_not_disguised_as_success)
+HTTP 500 should propagate a network/service error. ... ok
+test_watson_request_format (test_emotion_detection.TestEmotionDetector.test_watson_request_format)
+Send text and model ID to the expected Watson endpoint. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.004s
+
+OK

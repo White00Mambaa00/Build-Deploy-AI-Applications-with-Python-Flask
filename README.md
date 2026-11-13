@@ -1,86 +1,44 @@
-# Emotion Detector — AI Application Using Python & Flask
+# Emotion Detector — IBM Skills Network Final Project
 
-## Project Overview
+A Flask application that sends input text to IBM Skills Network's Watson NLP EmotionPredict service and returns anger, disgust, fear, joy, sadness, and the dominant emotion.
 
-This project is developed as part of the Coursera course **Build & Deploy AI Applications with Python & Flask**.
+## Contents
 
-The Emotion Detector is an AI-powered web application that analyzes text using IBM Watson NLP and identifies the dominant emotion expressed.
+- `EmotionDetection/emotion_detection.py` — Watson NLP integration and output formatting
+- `EmotionDetection/__init__.py` — package export
+- `server.py` — Flask website with `/emotionDetector?textToAnalyze=...`
+- `test_emotion_detection.py` — offline unit tests (mocked Watson API)
+- `templates/index.html` and `static/*` — UI
+- `submission_guide.md` — exact answers and evidence commands for questions 1–16
+- `submission_snippets/` — saved copies of code for the named submission questions
 
-## Features
-
-- Detects five emotions: anger, disgust, fear, joy, and sadness.
-- Identifies the dominant emotion.
-- Provides a web interface using Flask.
-- Handles invalid or empty inputs.
-- Includes Python unit tests.
-- Supports static code analysis using Pylint.
-
-## Technologies Used
-
-- Python
-- Flask
-- IBM Watson NLP
-- REST API
-- Python Unittest
-- Pylint
-- HTML and JavaScript
-
-## Project Structure
-
-```text
-oaqjp-final-project-emb-ai/
-├── EmotionDetection/
-│   ├── __init__.py
-│   └── emotion_detection.py
-├── templates/
-│   └── index.html
-├── static/
-├── server.py
-├── test_emotion_detection.py
-├── requirements.txt
-└── README.md
-```
-
-## Installation and Execution
-
-Install dependencies:
+## Installation
 
 ```bash
 python3 -m pip install -r requirements.txt
-```
-
-Run the Flask application:
-
-```bash
+python3 -m unittest -v test_emotion_detection.py
 python3 server.py
 ```
 
-Open the application:
+Open http://127.0.0.1:5000 and enter `I think I am having fun`.
+The web interface calls the Watson NLP endpoint when it analyzes text.
 
-`http://localhost:5000`
+**Important:** The `sn-watson-emotion.labs.skills.network` endpoint is supplied by the IBM Skills Network labs. It may not be reachable outside the course's cloud environment. The mocked tests can run without network access; live score evidence must be captured where the endpoint actually works.
 
-Run unit tests:
+The Flask development server binds on port 5000 so the cloud lab preview can reach it. Do not use the Flask development server as a public production server.
+
+## Example package import
 
 ```bash
-python3 -m unittest -v test_emotion_detection.py
+python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am really mad about this'))"
 ```
 
-Run static code analysis:
+## Static code analysis
 
 ```bash
 pylint server.py
 ```
 
-## Note
+## GitHub submission
 
-Live emotion detection requires access to the IBM Skills Network Watson NLP service, which may be limited to the course lab environment.
-
-## Course Information
-
-**Course:** Build & Deploy AI Applications with Python & Flask
-
-**Platform:** Coursera
-
-**Project:** Emotion Detector — Final Project
-
-**Purpose:** Educational and practical implementation of AI application development using Python and Flask.
+Create a public repository named `oaqjp-final-project-emb-ai`, upload the actual project, and submit your own links to `README.md` and `EmotionDetection/__init__.py`. This template does **not** create a remote repository or fabricate any grader screenshots.
