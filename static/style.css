@@ -1,0 +1,24 @@
+:root { color-scheme: light; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #192840; background: radial-gradient(circle at 90% 0%, #e2eeff 0, transparent 42%), #f4f7fb; min-height: 100vh; }
+.layout { width: min(810px, calc(100% - 36px)); margin: 0 auto; padding: 60px 0 32px; }
+.masthead { margin: 0 0 34px; }
+.eyebrow { display: block; color: #486ad6; font-size: 11px; font-weight: 800; letter-spacing: .17em; }
+h1 { margin: 15px 0 10px; font-size: clamp(32px, 5vw, 48px); letter-spacing: -.045em; line-height: 1.1; }
+.masthead p { margin: 0; color: #60708a; font-size: 16px; line-height: 1.6; }
+.panel { padding: 27px 30px 30px; border: 1px solid #dde5f1; background: #fff; border-radius: 17px; box-shadow: 0 14px 36px rgba(31, 64, 110, .055); margin-bottom: 20px; }
+.panel-top { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 26px; }
+.step { font-size: 12px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: #63738f; }
+.pill { background: #eff3ff; color: #435cbd; border-radius: 999px; padding: 7px 12px; font-size: 12px; font-weight: 700; }
+label { display: block; margin-bottom: 13px; font-size: 18px; font-weight: 700; }
+textarea { display: block; width: 100%; resize: vertical; min-height: 130px; padding: 16px 17px; border: 1px solid #cdd8e6; border-radius: 10px; color: #1f2b41; font-size: 16px; line-height: 1.5; font-family: inherit; background: #fbfdff; }
+textarea:focus { outline: 3px solid #dfe9ff; border-color: #5278e3; }
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: 20px; }
+button { border: 0; border-radius: 10px; background: #365bd5; color: #fff; padding: 14px 20px; font: inherit; font-weight: 750; cursor: pointer; box-shadow: 0 8px 16px rgba(54, 91, 213, .18); }
+button:hover { background: #274bbd; } button:disabled { cursor: progress; opacity: .6; }
+.actions > span { color: #8391a6; font-size: 12px; }
+h2 { font-size: 19px; margin: 0 0 14px; }
+.status { color: #5377b2; font-size: 12px; font-weight: 750; }
+#system_response { padding: 18px; min-height: 86px; background: #f6f9ff; border: 1px solid #e7eef9; border-radius: 10px; color: #485a73; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
+footer { text-align: center; padding: 12px; color: #91a0b2; font-size: 12px; }
+@media (max-width: 540px) { .layout { padding-top: 34px; } .panel { padding: 22px 18px; } }
