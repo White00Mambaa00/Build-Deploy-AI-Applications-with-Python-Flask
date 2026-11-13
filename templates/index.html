@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emotion Detector | IBM Watson NLP</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="{{ url_for('static', filename='mywebscript.js') }}"></script>
+</head>
+<body>
+  <main class="layout">
+    <header class="masthead">
+      <span class="eyebrow">NATURAL LANGUAGE PROCESSING · FINAL PROJECT</span>
+      <h1>NLP — Emotion Detection</h1>
+      <p>Analyze text and understand its emotional signals using IBM Watson NLP.</p>
+    </header>
+    <section class="panel" aria-label="Emotion detection form">
+      <div class="panel-top"><span class="step">01 / Analyze</span><span class="pill">Five emotions + dominant emotion</span></div>
+      <label for="textToAnalyze">Please enter the text to be analyzed</label>
+      <textarea id="textToAnalyze" name="textToAnalyze" rows="5" placeholder="Example: I think I am having fun"></textarea>
+      <div class="actions">
+        <button id="analyzeButton" type="button" onclick="RunSentimentAnalysis()">Analyze emotion <span aria-hidden="true">↗</span></button>
+        <span>Text is analyzed by the course's Watson NLP service.</span>
+      </div>
+    </section>
+    <section class="panel result-panel" aria-label="Emotion detection result">
+      <div class="panel-top"><span class="step">02 / Result</span><span class="status" id="analysisStatus">Ready for input</span></div>
+      <h2>Result of Emotion Detection</h2>
+      <div id="system_response" role="status" aria-live="polite">Your emotion scores and dominant emotion will appear here.</div>
+    </section>
+    <footer>IBM Skills Network · Emotion Detector project</footer>
+  </main>
+</body>
+</html>
